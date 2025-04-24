@@ -51,7 +51,7 @@ export function createProject(projectItems = projectList) {
         projectListHTML += `
         <div class="project-section-box-container">
             <h3>${project.name}</h3>
-            <img src="src/media/${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
+            <img src="./src/media/${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
             <p>${project.info}</p>
             <a href="${project.link}">Demo</a>
         </div>
