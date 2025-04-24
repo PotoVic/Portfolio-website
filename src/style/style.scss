@@ -242,6 +242,7 @@ body{
             border: 10px solid rgb(173, 173, 173);
             border-top: 5px solid rgb(173, 173, 173);
             border-bottom: none;
+            padding-bottom: 50px;
             h2{
                 text-align: center;
                 color: rgb(198, 219, 240);
@@ -258,7 +259,7 @@ body{
                 margin-top: 15px;
                 &-container{
                     width: 600px;
-                    height: 600px;
+                    height: 500px;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
