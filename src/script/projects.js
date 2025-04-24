@@ -1,7 +1,7 @@
  export const projectList = [{
     id:1,
     name:'Disney Quiz',
-    image:'DisneyIMG.jpg',
+    image:'src/media/DisneyIMG.jpg',
     alt:'Disney Quiz Website ',
     width:'1920',
     height:'915',
@@ -12,7 +12,7 @@
 {
     id:2,
     name:'Dough Almighty',
-    image:'DoughAlmightyIMG.jpg',
+    image:'src/media/DoughAlmightyIMG.jpg',
     alt:'Dough Almighty Website',
     width:'1901',
     height:'914',
@@ -23,7 +23,7 @@
 {
     id:3,
     name:'Lumina',
-    image:'LuminaIMG.jpg',
+    image:'src/media/LuminaIMG.jpg',
     alt:'Lumina Website',
     width:'1903',
     height:'916',
@@ -34,7 +34,7 @@
 {
     id:4,
     name:'SRs Humorprogram',
-    image:'SRHumorprogramIMG.jpg',
+    image:'src/media/SRHumorprogramIMG.jpg',
     alt:'Humorprogram image',
     width:'1907',
     height:'913',
@@ -51,7 +51,7 @@ export function createProject(projectItems = projectList) {
         projectListHTML += `
         <div class="project-section-box-container">
             <h3>${project.name}</h3>
-            <img src="./src/media/${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
+            <img src="${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
             <p>${project.info}</p>
             <a href="${project.link}">Demo</a>
         </div>
