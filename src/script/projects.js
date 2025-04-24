@@ -1,18 +1,18 @@
  export const projectList = [{
     id:1,
     name:'Disney Quiz',
-    image:'/src/media/DisneyIMG.jpg',
+    image:'src/media/DisneyIMG.jpg',
     alt:'Disney Quiz Website ',
     width:'1920',
     height:'915',
-    info:'This is a basic quiz website, The main goal of building this website was to get more familliar how Typescript works, but also to learn how to use the scrum agile methodology in groups',
+    info:'Disney Quiz is a fun and interactive quiz website about disney movies, The main purporse of building this website was to get more famillar with typescript but also learn how to work in group with agile methodology.',
     link:'https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-swift-group/'
     
 },
 {
     id:2,
     name:'Dough Almighty',
-    image:'/src/media/DoughAlmightyIMG.jpg',
+    image:'src/media/DoughAlmightyIMG.jpg',
     alt:'Dough Almighty Website',
     width:'1901',
     height:'914',
@@ -23,7 +23,7 @@
 {
     id:3,
     name:'Lumina',
-    image:'/src/media/LuminaIMG.jpg',
+    image:'src/media/LuminaIMG.jpg',
     alt:'Lumina Website',
     width:'1903',
     height:'916',
@@ -34,29 +34,13 @@
 {
     id:4,
     name:'SRs Humorprogram',
-    image:'/src/media/SRHumorprogramIMG.jpg',
+    image:'src/media/SRHumorprogramIMG.jpg',
     alt:'Humorprogram image',
     width:'1907',
     height:'913',
     info:'This is very simple Website of SR Humorprogram, The main goal of this project was to finish an unfinished project of someone else',
     link:'https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-PotoVic/'
     
-},
-{
-    id:5,
-    name:'Empty',
-    image:'',
-    alt:'',
-    width:'3840',
-    height:'1734'
-},
-{
-    id:6,
-    name:'Empty',
-    image:'',
-    alt:'',
-    width:'3840',
-    height:'1734' 
 }]
 
 
@@ -66,11 +50,10 @@ export function createProject(projectItems = projectList) {
     projectItems.forEach(project => {
         projectListHTML += `
         <div class="project-section-box-container">
-            <a href="/project.html?id=${project.id}">
-                <p>${project.name}</p>
-                <div class="project-section-box-overlay"></div>
-                <img src="${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
-            </a> 
+            <h3>${project.name}</h3>
+            <img src="${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
+            <p>${project.info}</p>
+            <a href="${project.link}">Demo</a>
         </div>
         `;
     });
