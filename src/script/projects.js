@@ -1,7 +1,7 @@
  export const projectList = [{
     id:1,
     name:'Disney Quiz',
-    image:'src/media/DisneyIMG.jpg',
+    image:'/images/DisneyIMG.jpg',
     alt:'Disney Quiz Website ',
     width:'1920',
     height:'915',
@@ -12,7 +12,7 @@
 {
     id:2,
     name:'Dough Almighty',
-    image:'src/media/DoughAlmightyIMG.jpg',
+    image:'/images/DoughAlmightyIMG.jpg',
     alt:'Dough Almighty Website',
     width:'1901',
     height:'914',
@@ -23,7 +23,7 @@
 {
     id:3,
     name:'Lumina',
-    image:'src/media/LuminaIMG.jpg',
+    image:'/images/LuminaIMG.jpg',
     alt:'Lumina Website',
     width:'1903',
     height:'916',
@@ -34,7 +34,7 @@
 {
     id:4,
     name:'SRs Humorprogram',
-    image:'src/media/SRHumorprogramIMG.jpg',
+    image:'/images/SRHumorprogramIMG.jpg',
     alt:'Humorprogram image',
     width:'1907',
     height:'913',
