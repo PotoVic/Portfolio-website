@@ -1,6 +1,9 @@
 @use 'reset' as *;
 @use 'global' as *;
 
+html{
+    scroll-padding-top: 50px;
+}
 body{
     
     .video-hp{
@@ -26,7 +29,8 @@ body{
                 text-align: center;
                 width: 200px;
                 height: 60px;
-                font-family: $Mainfont;
+                font-family: $Secondfont;
+                
                 list-style: none;
                 font-size: 1.6rem;
                 display: grid;
@@ -125,16 +129,13 @@ body{
         }
         .about-section{
             margin-top: -80px;
-            height: 85vh;
+            height: 75vh;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             background-color: #606c81;
-            border: 5px solid rgb(172, 187, 214);
-            border-top: none;
-            border-bottom: none;
             gap: 200px;
             &-img{
                 height: 600px;
@@ -184,9 +185,7 @@ body{
             display: flex;
             align-items: center;
             flex-direction: column;
-            border: 5px solid rgb(172, 187, 214);
             border-top: 5px solid rgb(172, 187, 214) ;
-            border-bottom: none;
             h2{
                 font-size: 2.5rem;
                 font-family: $Mainfont;
@@ -243,10 +242,8 @@ body{
             width: 100%;
             height: 100%;
             background-color: #606c81;
-            border: 5px solid rgb(172, 187, 214);
             border-top: 5px solid rgb(172, 187, 214);
-            border-bottom: none;
-            padding-bottom: 50px;
+            padding: 25px 20px;
             h2{
                 text-align: center;
                 color: rgb(198, 219, 240);
@@ -258,9 +255,10 @@ body{
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 align-items: center;
-                gap: 50px;
+                gap: 35px;
                 width: 100%;
                 margin-top: 15px;
+                margin-bottom: 15px;
                 &-container{
                     width: 600px;
                     height: 500px;
@@ -315,9 +313,7 @@ body{
         width: 100%;
         height: 300px;
         background-color: #606c81;
-        border: 5px solid rgb(172, 187, 214);
-        border-top: 5px solid rgb(172, 187, 214);
-        border-bottom: none;
+        border-top: 5px solid #acbbd6;
         .footer-section{
             display: flex;
             flex-direction: row;
@@ -332,7 +328,24 @@ body{
                 width: 400px;
                 height: 295px;
                 &:nth-child(2){
-
+                    svg{
+                        scale: 1.1;
+                        #firstBubble{
+                            filter: drop-shadow(2px 2px 7px    rgba(0, 0, 0, 0.150))
+                        }
+                        #secondBubble{
+                            filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
+                        }
+                        #thirdBubble{
+                            filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
+                        }
+                        #fourthBubble{
+                            filter: drop-shadow( 2px 2px 7px rgba(0, 0, 0, 0.150))
+                        }
+                        #lastBubble {
+                            filter: drop-shadow( 1px 1px 7px rgba(0, 0, 0, 0.150));
+                          }
+                    }
                 }
                 &:nth-child(3){
                     display: flex;
@@ -370,7 +383,7 @@ body{
                             font-weight: 700;
                             font-size: 2rem;
                             text-decoration: none;
-                            color: rgb(198, 219, 240);
+                            color: #c6dbf0;
                             &:hover{
                                 text-decoration: underline;
                                 color: rgb(177, 208, 240);

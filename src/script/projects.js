@@ -17,7 +17,7 @@
     width:'1901',
     height:'914',
     info:'This is ecommerce website called Dough Almighty, this was the first time I had to work with Javascript and build actual working website',
-    link:'https://github.com/Medieinstitutet/fed24d-js-intro-inl-1-webshop-PotoVic'
+    link:'https://medieinstitutet.github.io/fed24d-js-intro-inl-1-webshop-PotoVic/'
     
 },
 {
@@ -53,7 +53,7 @@ export function createProject(projectItems = projectList) {
             <h3>${project.name}</h3>
             <img src="${project.image}" alt="${project.alt}" width="${project.width}" height="${project.height}" loading="lazy">
             <p>${project.info}</p>
-            <a href="${project.link}">Demo</a>
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer">Demo</a>
         </div>
         `;
     });
