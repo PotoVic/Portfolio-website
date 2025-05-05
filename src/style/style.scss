@@ -1,23 +1,21 @@
 @use 'reset' as *;
 @use 'global' as *;
-
-html{
-    scroll-padding-top: 50px;
+@use 'tablet' as *;
+@use 'mobile' as *;
+.video-hp{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
 }
-body{
-    
-    .video-hp{
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        z-index: -1;
-    }
+header{
     .header{
         height: 80px;
         width: 100%;
+        
         ul{
             display: flex;
             flex-direction: row;
@@ -58,344 +56,399 @@ body{
             }
         }
     }
-    main{
+    .hambrg-icon{
+        
+        display: none;
+    }
+}
+.offScreenMenu{
+            
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    
+    z-index: 4;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+        text-align: center;
+        li{
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 85px;
+        }
+    }
+    &.active{
+        visibility: visible;
+        background-color: rgb(236, 187, 195);
+    }
+    .offButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 70px;
+        width: 70px;
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .home-section{
+        width: 400px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        .home-section{
-            width: 400px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-            svg{
-                width: 100%;
-                height: 80px;
-                path{
-                    fill: $MainColor;
-                }            
-            }
-            p{
-                font-size: 1.1rem;
-                font-family: $Mainfont;
-                color: #4F5D75;
-            }
-            &-btns{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 100px;
-                a{
-                    width: 140px;
-                    height: 45px;
-                    font-family: $Secondfont;
-                    font-weight: 700;
-                    text-decoration: none;
-                    font-size: 1.5rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: 150ms ease-in-out;
-                    &:nth-child(1){
-                        border: 2px solid #4F5D75;
-                        background-color: white;
-                        color: #4F5D75;
-                        &:hover{
-                           color: white;
-                           background-color: #4F5D75;
-                        }
-                        
-                    }
-                    &:nth-child(3){
-                        background-color: #4F5D75;
-                        border: none;
-                        color: white;
-                        &:hover{
-                            color: #4F5D75;
-                            background-color: white;
-                        }
-                    } 
-                }
-                span{
-                    width: 90px;
-                    height: 1px;
-                    background-color: #4F5D75;
-                }
-            }
+        gap: 30px;
+        svg{
+            width: 100%;
+            height: 80px;
+            path{
+                fill: $MainColor;
+            }            
         }
-        .about-section{
-            margin-top: -80px;
-            height: 75vh;
+        p{
+            font-size: 1.1rem;
+            font-family: $Mainfont;
+            color: #4F5D75;
+        }
+        &-btns{
             width: 100%;
             display: flex;
             flex-direction: row;
-            justify-content: center;
             align-items: center;
-            background-color: #606c81;
-            gap: 200px;
-            &-img{
-                height: 600px;
-                width: 350px;
-                img{
-                    
-                    width: 350px;
-                    height: 600px;
-                }
-            }
-            &-text{
-                width: 500px;
-                height: 600px;
-                background-color: #606c81;
-                h2{
-                    font-family: $Secondfont;
-                    font-size: 1.9rem;
-                    margin-bottom: 10px;
-                    color: rgb(198, 219, 240);
-                }
-                p{
-                    font-family: $Mainfont;
-                    font-size: 1rem;
-                    line-height: 2rem;
-                    color: rgb(198, 219, 240);
-                    &:nth-child(5){
-                        margin-bottom: 20px;
-                    } 
-                }
-                a{
-                    font-size: 1.8rem;
-                    color: rgb(198, 219, 240);
-                    transition: 100ms ease-in-out;
-                    font-family: $Secondfont;
-                    
-                    &:hover{
-                        font-weight: 700;
-                        color: rgb(177, 208, 240);
-                    }
-                }  
-            }
-        }
-        .skill-section{
-            width: 100%;
-            height: 350px;
-            background-color: #606c81;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            border-top: 5px solid rgb(172, 187, 214) ;
-            h2{
-                font-size: 2.5rem;
-                font-family: $Mainfont;
-                color: rgb(198, 219, 240);
-            }
-            &-box{
+            justify-content: space-between;
+            margin-bottom: 100px;
+            a{
+                width: 140px;
+                height: 45px;
+                font-family: $Secondfont;
+                font-weight: 700;
+                text-decoration: none;
+                font-size: 1.5rem;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 1300px;
-                &-right{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 25px;
-                    justify-content: space-between;
-                    &-skill{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 20px;
-                        p{
-                            font-size: 1.8rem;
-                            font-family: $Secondfont;
-                            font-weight: 700;
-                            width: 210px;
-                            text-align: end;
-                            color: rgb(198, 219, 240);
-                        }
-                    }
-                }
-                &-left{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 25px;
-                    justify-content: space-between;
-                    &-skill{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 20px;
-                        p{
-                            font-size: 1.8rem;
-                            font-family: $Secondfont;
-                            font-weight: 700;
-                            width: 240px;
-                            text-align: start;
-                            color: rgb(198, 219, 240);
-                        }
-                    }
-                }
-            }
-        }
-        .project-section{
-            width: 100%;
-            height: 100%;
-            background-color: #606c81;
-            border-top: 5px solid rgb(172, 187, 214);
-            padding: 25px 20px;
-            h2{
-                text-align: center;
-                color: rgb(198, 219, 240);
-                font-size: 2.5rem;
-                font-family: $Mainfont;
-            }
-            &-box{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: center;
                 align-items: center;
-                gap: 35px;
-                width: 100%;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                &-container{
-                    width: 600px;
-                    height: 500px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    align-items: center;
+                transition: 150ms ease-in-out;
+                &:nth-child(1){
+                    border: 2px solid #4F5D75;
+                    background-color: white;
+                    color: #4F5D75;
+                    &:hover{
+                       color: white;
+                       background-color: #4F5D75;
+                    }
                     
-                    h3{
-                        font-size: 1.7rem;
-                        font-family: $Secondfont;
-                        color: rgb(198, 219, 240);
+                }
+                &:nth-child(3){
+                    background-color: #4F5D75;
+                    border: none;
+                    color: white;
+                    &:hover{
+                        color: #4F5D75;
+                        background-color: white;
                     }
-                    img{
-                        width: 600px;
-                        height: 350px;
-                        object-fit: cover;
-                        border-radius: 10px; 
-                    }
+                } 
+            }
+            span{
+                width: 90px;
+                height: 1px;
+                background-color: #4F5D75;
+            }
+        }
+    }
+    .about-section{
+        margin-top: -80px;
+        height: 75vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #606c81;
+        gap: 200px;
+        &-img{
+            height: 600px;
+            width: 350px;
+            img{
+                
+                width: 350px;
+                height: 600px;
+            }
+        }
+        &-text{
+            width: 500px;
+            height: 600px;
+            background-color: #606c81;
+            h2{
+                font-family: $Secondfont;
+                font-size: 1.9rem;
+                margin-bottom: 10px;
+                color: rgb(198, 219, 240);
+            }
+            p{
+                font-family: $Mainfont;
+                font-size: 1rem;
+                line-height: 2rem;
+                color: rgb(198, 219, 240);
+                &:nth-child(5){
+                    margin-bottom: 20px;
+                } 
+            }
+            a{
+                font-size: 1.8rem;
+                color: rgb(198, 219, 240);
+                transition: 100ms ease-in-out;
+                font-family: $Secondfont;
+                
+                &:hover{
+                    font-weight: 700;
+                    color: rgb(177, 208, 240);
+                }
+            }  
+        }
+    }
+    .skill-section{
+        width: 100%;
+        height: 350px;
+        background-color: #606c81;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid rgb(172, 187, 214) ;
+        h2{
+            font-size: 2.5rem;
+            font-family: $Mainfont;
+            color: rgb(160, 204, 248);
+        }
+        &-box{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1300px;
+            &-right{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                justify-content: space-between;
+                &-skill{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
                     p{
-                        font-family: $Mainfont;
-                        font-size: 1.1rem;
+                        font-size: 1.8rem;
+                        font-family: $Secondfont;
+                        font-weight: 700;
+                        width: 210px;
+                        text-align: end;
                         color: rgb(198, 219, 240);
                     }
-                    a{
-                        align-self: start;
-                        width: 120px;
-                        height: 45px;
-                        background-color: #4F5D75;
-                        padding-top: 1px;
+                }
+            }
+            &-left{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                justify-content: space-between;
+                &-skill{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    p{
+                        font-size: 1.8rem;
                         font-family: $Secondfont;
-                            font-weight: 700;
-                        text-decoration: none;
-                        font-size: 1.5rem;
-                        text-align: center;
-                        text-transform: uppercase;
+                        font-weight: 700;
+                        width: 240px;
+                        text-align: start;
                         color: rgb(198, 219, 240);
-                        cursor: pointer;
-                        border: 2px solid rgb(173, 173, 173);
-                        border-radius: 5px;
-                        &:hover{
-                            border: 2px solid rgb(198, 219, 240);
-                            color: rgb(215, 228, 241);
-                            background-color: rgb(94, 112, 141);
-                        }
                     }
                 }
             }
         }
     }
-    footer{
+    .project-section{
         width: 100%;
-        height: 300px;
+        height: 100%;
         background-color: #606c81;
-        border-top: 5px solid #acbbd6;
-        .footer-section{
+        border-top: 5px solid rgb(172, 187, 214);
+        padding: 25px 20px;
+        h2{
+            text-align: center;
+            color: rgb(160, 204, 248);
+            font-size: 2.5rem;
+            font-family: $Mainfont;
+        }
+        &-box{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-right: 20px;
-            padding-left: 20px;
-            &-box{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 35px;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            &-container{
+                width: 600px;
+                height: 500px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                gap: 10px;
                 align-items: center;
-                width: 400px;
-                height: 295px;
-                &:nth-child(2){
-                    svg{
-                        scale: 1.1;
-                        #firstBubble{
-                            filter: drop-shadow(2px 2px 7px    rgba(0, 0, 0, 0.150))
-                        }
-                        #secondBubble{
-                            filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
-                        }
-                        #thirdBubble{
-                            filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
-                        }
-                        #fourthBubble{
-                            filter: drop-shadow( 2px 2px 7px rgba(0, 0, 0, 0.150))
-                        }
-                        #lastBubble {
-                            filter: drop-shadow( 1px 1px 7px rgba(0, 0, 0, 0.150));
-                          }
+                
+                h3{
+                    font-size: 1.7rem;
+                    font-family: $Secondfont;
+                    color: rgb(198, 219, 240);
+                }
+                img{
+                    width: 600px;
+                    height: 350px;
+                    object-fit: cover;
+                    border-radius: 10px; 
+                }
+                p{
+                    font-family: $Mainfont;
+                    font-size: 1.1rem;
+                    color: rgb(198, 219, 240);
+                }
+                a{
+                    align-self: start;
+                    width: 120px;
+                    height: 45px;
+                    background-color: #4F5D75;
+                    padding-top: 1px;
+                    font-family: $Secondfont;
+                        font-weight: 700;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: rgb(198, 219, 240);
+                    cursor: pointer;
+                    border: 2px solid rgb(173, 173, 173);
+                    border-radius: 5px;
+                    &:hover{
+                        border: 2px solid rgb(198, 219, 240);
+                        color: rgb(215, 228, 241);
+                        background-color: rgb(94, 112, 141);
                     }
                 }
-                &:nth-child(3){
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #606c81;
+    border-top: 5px solid #acbbd6;
+    .footer-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 20px;
+        padding-left: 20px;
+        &-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 295px;
+            &:nth-child(2){
+                svg{
+                    scale: 1.1;
+                    #firstBubble{
+                        filter: drop-shadow(2px 2px 7px    rgba(0, 0, 0, 0.150))
+                    }
+                    #secondBubble{
+                        filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
+                    }
+                    #thirdBubble{
+                        filter: drop-shadow( 2px 2px 7px   rgba(0, 0, 0, 0.150))
+                    }
+                    #fourthBubble{
+                        filter: drop-shadow( 2px 2px 7px rgba(0, 0, 0, 0.150))
+                    }
+                    #lastBubble {
+                        filter: drop-shadow( 1px 1px 7px rgba(0, 0, 0, 0.150));
+                      }
+                }
+            }
+            &:nth-child(3){
+                display: flex;
+                gap: 45px;
+                a{
+                    width: 190px;
+                    font-family: $Secondfont;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    color: #c6dbf0;
+                    svg{
+                        float: right;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                        color: rgb(177, 208, 240);
+                    }
+                    &:visited{
+                        color: rgb(177, 208, 240);
+                    }
+                    &:focus{
+                        color: rgb(177, 208, 240);
+                    }
+                }
+            }
+            nav{
+                ul{
                     display: flex;
-                    gap: 45px;
+                    flex-direction: column;
+                    list-style: none;
+                    gap: 25px;
                     a{
-                        width: 190px;
                         font-family: $Secondfont;
                         font-weight: 700;
                         font-size: 2rem;
                         text-decoration: none;
                         color: #c6dbf0;
-                        svg{
-                            float: right;
-                        }
                         &:hover{
                             text-decoration: underline;
                             color: rgb(177, 208, 240);
                         }
                         &:visited{
-                            color: rgb(177, 208, 240);
+                            color: rgb(198, 219, 240);
+                            
                         }
                         &:focus{
+                            text-decoration: underline;
                             color: rgb(177, 208, 240);
-                        }
-                    }
-                }
-                nav{
-                    ul{
-                        display: flex;
-                        flex-direction: column;
-                        list-style: none;
-                        gap: 25px;
-                        a{
-                            font-family: $Secondfont;
-                            font-weight: 700;
-                            font-size: 2rem;
-                            text-decoration: none;
-                            color: #c6dbf0;
-                            &:hover{
-                                text-decoration: underline;
-                                color: rgb(177, 208, 240);
-                            }
-                            &:visited{
-                                color: rgb(198, 219, 240);
-                                
-                            }
-                            &:focus{
-                                text-decoration: underline;
-                                color: rgb(177, 208, 240);
-                            }
                         }
                     }
                 }
@@ -403,3 +456,46 @@ body{
         }
     }
 }
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    
+    main{
+        .about-section{
+            padding-right: 20px;
+            padding-left: 20px;
+            gap: 75px;
+            
+        }
+        .skill-section{
+            &-box{
+                width: 100%;
+            }
+        }
+        .project-section{
+            padding: 0;
+            padding-bottom: 15px;
+            h2{
+                
+            }
+            &-box{
+                &-container{
+                    width: 800px;
+                    height: 550px;
+                    justify-content: space-between;
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                    img{
+                        width: 800px;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+ }

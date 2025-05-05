@@ -16,7 +16,7 @@
     alt:'Dough Almighty Website',
     width:'1901',
     height:'914',
-    info:'This is ecommerce website called Dough Almighty, this was the first time I had to work with Javascript and build actual working website',
+    info:'This is ecommerce website called Dough Almighty, during this project I worked with javascript for the first time, The main goal was to get familliar with javascript and to learn how it works.',
     link:'https://medieinstitutet.github.io/fed24d-js-intro-inl-1-webshop-PotoVic/'
     
 },
@@ -27,7 +27,7 @@
     alt:'Lumina Website',
     width:'1903',
     height:'916',
-    info:'This is a business website of a fake company called Lumina, the main goal of this project was to build business website out of someone else design but also to use Vue as framework',
+    info:'This is a business website of a fake company called Lumina, the main goal of this project was to build business website out of someone else design but also to use Vue as framework.',
     link:'https://medieinstitutet.github.io/fed24d-grafiska-verktyg-surikaterna/'
     
 },
@@ -38,7 +38,7 @@
     alt:'Humorprogram image',
     width:'1907',
     height:'913',
-    info:'This is very simple Website of SR Humorprogram, The main goal of this project was to finish an unfinished project of someone else',
+    info:'This is very simple Website of SR Humorprogram, during this project I was tasked to finish an unfinished project by someone else, but also learn how to connect and fetch api.',
     link:'https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-PotoVic/'
     
 }]

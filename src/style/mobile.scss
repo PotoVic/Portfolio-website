@@ -1,0 +1,34 @@
+@use 'global' as *;
+
+@media (max-width:767px){
+    html{
+        scroll-padding-top: 50px;
+    }
+    body{
+        header{
+            .header{
+                display: none;
+            }
+            .hambrg-icon{
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 70px;
+                width: 70px;
+                background-color: transparent;
+                border: transparent;
+                cursor: pointer;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
