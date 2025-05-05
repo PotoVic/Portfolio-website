@@ -464,11 +464,20 @@ footer{
         .about-section{
             padding-right: 20px;
             padding-left: 20px;
-            padding-bottom: 20px;
             gap: 75px;
-            
-            div{
-                height: 80%;
+            height: 85vh;
+            align-items: center;
+            &-img{
+                height: 550px;
+                img{
+                    height: 550px;
+                }
+            }
+            &-text{
+                height: auto;
+                p{
+                    line-height: 1.7rem;
+                }
             }
         }
         .skill-section{
