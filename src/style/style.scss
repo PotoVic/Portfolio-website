@@ -183,7 +183,7 @@ main{
     }
     .about-section{
         margin-top: -80px;
-        height: 75vh;
+        height: 700px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -192,19 +192,19 @@ main{
         padding-top: 20px;
         padding-bottom: 20px;
         background-color: #606c81;
-        gap: 200px;
+        gap: 300px;
         &-img{
-            height: 600px;
+            height: 90%;
             width: 350px;
             img{
+                height: 100%;
+                width: 100%;
                 
-                width: 350px;
-                height: 600px;
             }
         }
         &-text{
             width: 500px;
-            height: 600px;
+            height: 90%;
             background-color: #606c81;
             h2{
                 font-family: $Secondfont;
@@ -251,7 +251,7 @@ main{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            width: 1300px;
+            width: 70%;
             &-right{
                 display: flex;
                 flex-direction: column;
@@ -467,12 +467,12 @@ footer{
             padding-right: 20px;
             padding-left: 20px;
             gap: 75px;
-            height: 85vh;
+            height: auto;
             align-items: center;
             &-img{
-                height: 550px;
+                height: auto;
                 img{
-                    height: 550px;
+                    height: auto;
                 }
             }
             &-text{
