@@ -96,7 +96,20 @@
                 }
             }
             .project-section{
-                
+
+            }
+
+        }
+        footer{
+            .footer-section{
+                &-box{
+                    &:nth-child(3){
+                        margin-left: 10px;
+                    }
+                    nav{
+                        width: 200px;
+                    }
+                }
             }
         }
     }
